@@ -3,6 +3,7 @@ include 'student_marek_drobot'
 include 'student_marat_petrovsky'
 include 'student_sapar_kutbidinov'
 include 'student_vladislav_kuzir'
+include 'student_valeryia_dzianisava'
 
 
 include 'teacher:step_0'
