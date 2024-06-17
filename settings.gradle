@@ -11,6 +11,7 @@ include 'student_nikita_kogtev'
 include 'student_stepan_kardash'
 include 'student_vadzim_shylko'
 include 'student_aleksandr_sats'
+include 'student_alexander_korhov'
 
 
 include 'teacher:step_0'
