@@ -1,12 +1,38 @@
 package org.javaguru.travel.insurance.core;
-
+import org.javaguru.travel.insurance.rest.TravelCalculatePremiumRequest;
+import org.javaguru.travel.insurance.rest.TravelCalculatePremiumResponse;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import java.util.Date;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TravelCalculatePremiumServiceImplTest {
+public class TravelCalculatePremiumServiceImplTest {
 
-    @Test
-    public void deleteMe() {
+    private static TravelCalculatePremiumServiceImpl service;
 
+    @BeforeAll
+    public static void setUp() {
+        service = new TravelCalculatePremiumServiceImpl();
     }
 
+    @Test
+    public void testCalculatePremium() {
+
+        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
+        request.setPersonFirstName("Ilya");
+        request.setPersonLastName("Zhuk");
+        request.setAgreementDateFrom(new Date());
+        request.setAgreementDateTo(new Date());
+
+
+        TravelCalculatePremiumResponse response = service.calculatePremium(request);
+
+
+        assertEquals("Ilya", response.getPersonFirstName());
+        assertEquals("Zhuk", response.getPersonLastName());
+        assertEquals(request.getAgreementDateFrom(), response.getAgreementDateFrom());
+        assertEquals(request.getAgreementDateTo(), response.getAgreementDateTo());
+    }
 }
+
+
