@@ -23,8 +23,7 @@ public class TravelCalculatePremiumRequest {
     this.agreementDateTo = agreementDateTo;
     }
 
-    public String getPersonFirstName()
-    {
+    public String getPersonFirstName() {
         return personFirstName;
     }
 

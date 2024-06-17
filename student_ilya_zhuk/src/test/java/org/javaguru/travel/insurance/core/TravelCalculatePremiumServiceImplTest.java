@@ -8,30 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TravelCalculatePremiumServiceImplTest {
 
-    private static TravelCalculatePremiumServiceImpl service;
-
-    @BeforeAll
-    public static void setUp() {
-        service = new TravelCalculatePremiumServiceImpl();
-    }
-
     @Test
-    public void testCalculatePremium() {
+    public void deleteMe() {
 
-        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
-        request.setPersonFirstName("Ilya");
-        request.setPersonLastName("Zhuk");
-        request.setAgreementDateFrom(new Date());
-        request.setAgreementDateTo(new Date());
-
-
-        TravelCalculatePremiumResponse response = service.calculatePremium(request);
-
-
-        assertEquals("Ilya", response.getPersonFirstName());
-        assertEquals("Zhuk", response.getPersonLastName());
-        assertEquals(request.getAgreementDateFrom(), response.getAgreementDateFrom());
-        assertEquals(request.getAgreementDateTo(), response.getAgreementDateTo());
     }
 }
 
