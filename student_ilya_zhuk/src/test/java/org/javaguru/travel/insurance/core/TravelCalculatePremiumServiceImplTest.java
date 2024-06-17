@@ -17,17 +17,17 @@ public class TravelCalculatePremiumServiceImplTest {
 
     @Test
     public void testCalculatePremium() {
-        // Подготовка тестовых данных
+
         TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
         request.setPersonFirstName("Ilya");
         request.setPersonLastName("Zhuk");
         request.setAgreementDateFrom(new Date());
         request.setAgreementDateTo(new Date());
 
-        // Выполнение тестируемого метода
+
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
 
-        // Проверка результатов
+
         assertEquals("Ilya", response.getPersonFirstName());
         assertEquals("Zhuk", response.getPersonLastName());
         assertEquals(request.getAgreementDateFrom(), response.getAgreementDateFrom());
