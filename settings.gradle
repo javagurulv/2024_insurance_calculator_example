@@ -16,6 +16,7 @@ include 'student_helenko_daniil'
 include 'student_ilya_zhuk'
 include 'student_nikita_ryabchikov'
 include 'student_stepan_gerasimovich'
+include 'student_rifat_suleymanov'
 
 
 include 'teacher:step_0'
