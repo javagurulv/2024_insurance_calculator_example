@@ -9,16 +9,22 @@ public class TravelCalculatePremiumResponse {
     private Date agreementDateFrom;
     private Date agreementDateTo;
 
+    public TravelCalculatePremiumResponse() {
 
-    public TravelCalculatePremiumResponse() {}
-
-    public String getPersonFirstName()
+    }
+    public TravelCalculatePremiumResponse(String personFirstName, String personLastName, Date agreementDateFrom)
     {
+        this.personFirstName = personFirstName;
+        this.personLastName = personLastName;
+        this.agreementDateFrom = agreementDateFrom;
+        this.agreementDateTo = new Date();
+    }
+
+    public String getPersonFirstName() {
         return personFirstName;
     }
 
-    public void setPersonFirstName(String personFirstName)
-    {
+    public void setPersonFirstName(String personFirstName) {
         this.personFirstName = personFirstName;
     }
 
@@ -51,5 +57,5 @@ public class TravelCalculatePremiumResponse {
     {
         this.agreementDateTo = agreementDateTo;
     }
-}
 
+}
