@@ -21,6 +21,10 @@ include 'student_aleksey_kuncevich'
 include 'student_polina_hval'
 include 'student_valeria_mamaiko'
 include 'student_anna_zhernoclyova'
+include 'student_radkevich_vladislav'
+include 'student_nasevich_iliy'
+include 'student_roman_palugin'
+include 'student_aleksandr_masterkevich'
 
 
 include 'teacher:step_0'
