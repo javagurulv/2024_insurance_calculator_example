@@ -21,7 +21,7 @@ class TravelCalculatePremiumServiceImplAIOneTest {
     TravelCalculatePremiumResponse response = service.calculatePremium(request);
 
     assertEquals(agreementDateFrom, response.getAgreementDateFrom());
-    assertEquals(agreementDateFrom, response.getAgreementDateTo());
+    assertEquals(agreementDateTo, response.getAgreementDateTo());
     assertEquals(firstName, response.getPersonFirstName());
     assertEquals(lastName, response.getPersonLastName());
   }
