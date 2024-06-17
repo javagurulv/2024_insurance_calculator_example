@@ -23,6 +23,7 @@ include 'student_valeria_mamaiko'
 include 'student_anna_zhernoclyova'
 include 'student_radkevich_vladislav'
 include 'student_nasevich_iliy'
+include 'student_roman_palugin'
 
 
 include 'teacher:step_0'
