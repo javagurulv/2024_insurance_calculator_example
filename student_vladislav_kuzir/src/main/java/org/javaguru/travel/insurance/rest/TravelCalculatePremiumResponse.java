@@ -1,6 +1,7 @@
 package org.javaguru.travel.insurance.rest;
 
 import java.math.BigDecimal;
+import java.time.Duration;
 import java.util.Date;
 
 public class TravelCalculatePremiumResponse {
@@ -19,6 +20,8 @@ public class TravelCalculatePremiumResponse {
     this.agreementDateTo = agreementDateTo;
     this.personFirstName = personFirstName;
     this.personLastName = personLastName;
+    Duration betweenTwoDate = Duration.between(agreementDateTo.toInstant(),agreementDateFrom.toInstant());
+    this.agreementPrice = BigDecimal.valueOf(betweenTwoDate.toDays());
   }
 
   public BigDecimal getAgreementPrice() {
