@@ -1,6 +1,8 @@
 package org.javaguru.travel.insurance.core;
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumResponse;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
@@ -15,7 +17,7 @@ public class TravlerCalculatePremiumServiceImplAIOneTest
     private TravelCalculatePremiumResponse response;
     private Date testDate;
 
-
+@BeforeEach
     public void CalculatePremium() {
             service = new TravelCalculatePremiumServiceImpl();
             request = new TravelCalculatePremiumRequest();
