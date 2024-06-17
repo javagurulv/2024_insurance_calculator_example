@@ -14,6 +14,7 @@ include 'student_aleksandr_sats'
 include 'student_alexander_korhov'
 include 'student_helenko_daniil'
 include 'student_ilya_zhuk'
+include 'student_nikita_ryabchikov'
 
 
 include 'teacher:step_0'
