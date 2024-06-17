@@ -9,6 +9,7 @@ include 'student_roman_kuznetsov'
 include 'student_vladislav_volkov'
 include 'student_nikita_kogtev'
 include 'student_stepan_kardash'
+include 'student_vadzim_shylko'
 
 
 include 'teacher:step_0'
