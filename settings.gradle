@@ -20,7 +20,7 @@ include 'student_rifat_suleymanov'
 include 'student_aleksey_kuncevich'
 include 'student_polina_hval'
 include 'student_valeria_mamaiko'
-include 'student_anna_zernokleva'
+include 'student_anna_zhernoclyova'
 
 
 include 'teacher:step_0'
