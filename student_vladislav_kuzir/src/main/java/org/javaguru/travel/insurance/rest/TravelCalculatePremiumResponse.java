@@ -15,13 +15,16 @@ public class TravelCalculatePremiumResponse {
   public TravelCalculatePremiumResponse() {
   }
 
-  public TravelCalculatePremiumResponse(Date agreementDateFrom, Date agreementDateTo, String personFirstName, String personLastName) {
+  public TravelCalculatePremiumResponse(Date agreementDateFrom,
+                                        Date agreementDateTo,
+                                        BigDecimal agreementPrice,
+                                        String personFirstName,
+                                        String personLastName) {
     this.agreementDateFrom = agreementDateFrom;
     this.agreementDateTo = agreementDateTo;
+    this.agreementPrice = agreementPrice;
     this.personFirstName = personFirstName;
     this.personLastName = personLastName;
-    Duration betweenTwoDate = Duration.between(agreementDateTo.toInstant(),agreementDateFrom.toInstant());
-    this.agreementPrice = BigDecimal.valueOf(betweenTwoDate.toDays());
   }
 
   public BigDecimal getAgreementPrice() {
