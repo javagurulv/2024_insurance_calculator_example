@@ -7,6 +7,7 @@ include 'student_valeryia_dzianisava'
 include 'student_pisarchik_elizaveta'
 include 'student_roman_kuznetsov'
 include 'student_vladislav_volkov'
+include 'student_nikita_kogtev'
 
 
 include 'teacher:step_0'
