@@ -18,6 +18,7 @@ include 'student_nikita_ryabchikov'
 include 'student_stepan_gerasimovich'
 include 'student_rifat_suleymanov'
 include 'student_aleksey_kuncevich'
+include 'student_polina_hval'
 
 
 include 'teacher:step_0'
