@@ -12,7 +12,7 @@ class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService
         return new TravelCalculatePremiumResponse(request.getAgreementDateFrom(),
                 request.getAgreementDateFrom(),
                 request.getPersonFirstName(),
-                request.getPersonFirstName());
+                request.getPersonLastName());
     }
 
 }
