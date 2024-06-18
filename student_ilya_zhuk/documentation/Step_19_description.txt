@@ -1,0 +1,17 @@
+Задание вынести в отедный класс и затестить
+
+Вынес в отдельный класс DateAndTimeService
+
+затестил с помощью нейронки, тесты писать муторное занятие.
+
+public class DateAndtimeServiceTest {
+    public void testGetDateAndTimeBetween() {
+        Date start = new Date();
+        Date end = new Date(start.getTime() + TimeUnit.DAYS.toMillis(5));
+
+        DateAndTimeService service = new DateAndTimeService();
+        long daysBetween = service.getDateAndTimeBetween(start, end);
+
+        assertEquals(5, daysBetween);
+    }
+}
