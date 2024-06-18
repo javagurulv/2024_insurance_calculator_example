@@ -9,3 +9,8 @@ dependencies {
 	}
 
 }
+
+
+task printSomething{
+	println("My task works!!!")
+}
