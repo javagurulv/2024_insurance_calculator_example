@@ -3,10 +3,10 @@ package org.javaguru.travel.insurance.core;
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumResponse;
 import org.springframework.stereotype.Component;
-import java.time.LocalDate;
+
 
 import java.math.BigDecimal;
-import java.time.ZoneId;
+
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 
@@ -21,11 +21,17 @@ public class TravelCalculatePremiumServiceImpl implements TravelCalculatePremium
         response.setAgreementDateFrom(request.getAgreementDateFrom());
         response.setAgreementDateTo(request.getAgreementDateTo());
         response.setAgreementPrice(request.getAgreementPrice());
-        long dist = request.getAgreementDateFrom().getTime() - request.getAgreementDateTo().getTime();
-        var daysBetween = TimeUnit.DAYS.convert(dist, TimeUnit.MILLISECONDS);
-        response.setAgreementPrice(new BigDecimal(daysBetween));
+
+
+        var DaysBetween = calculationPriceOnDays(request);
+        response.setAgreementPrice(new BigDecimal(DaysBetween));
 
 
         return response;
+    }
+
+    public long calculationPriceOnDays(TravelCalculatePremiumRequest request) {
+        long distance = request.getAgreementDateFrom().getTime() - request.getAgreementDateTo().getTime();
+        return TimeUnit.DAYS.convert(distance, TimeUnit.MILLISECONDS);
     }
 }
