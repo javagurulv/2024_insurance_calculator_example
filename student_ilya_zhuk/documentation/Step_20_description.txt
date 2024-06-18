@@ -1,0 +1,62 @@
+Знакомство с понятием stateless и stateful объектов.
+
+Давайте на примере класса DateTimeService разберем
+что такое stateless и stateful объекты. Понятия
+stateless и stateful очень важны, особенно если
+вы хотите использовать эти объекты для создания
+многопоточных приложений.
+
+Ниже приведены две реализации класса DateTimeService (V1 и V2):
+
+class DateTimeServiceV1 {
+
+    long getDaysBetween(Date date1, Date date2) {
+        long diff = date2.getTime() - date1.getTime();
+        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+    }
+
+}
+
+class DateTimeServiceV2 {
+
+    private Date date1;
+    private Date date2;
+
+    DateTimeServiceV2(Date date1, Date date2) {
+        this.date1 = date1;
+        this.date2 = date2;
+    }
+
+    long getDaysBetween() {
+        long diff = date2.getTime() - date1.getTime();
+        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+    }
+
+}
+
+Как вы думаете, какую из этих реализаций проще использовать
+для многократного вычисления количества дней между датами?
+
+V1 code example:
+    var dateTimeService = new DateTimeServiceV1();
+    var daysBetween1 = dateTimeService.getDaysBetween(date1, date2);
+    var daysBetween2 = dateTimeService.getDaysBetween(date3, date4);
+    var daysBetween3 = dateTimeService.getDaysBetween(date5, date6);
+
+V2 code example:
+    var daysBetween1 = new DateTimeServiceV2(date1, date2).getDaysBetween();
+    var daysBetween2 = new DateTimeServiceV2(date3, date4).getDaysBetween();
+    var daysBetween3 = new DateTimeServiceV2(date5, date6).getDaysBetween();
+
+Какой из вариантов кода лучше? И почему?
+
+
+
+ОТВЕТ:
+
+Очевидно Stateless,  так как class DateTimeServiceV1 не имеет  скрытык состояний где его не видно,
+ и для  class DateTimeServiceV1 будет более оптимальна и безопасна многопоточность
+
+ Stateful объекты в выше приведенном случае, имеют возмонжость подвергаться изменению
+  в процессе рабоы программы, в многопоточности вообще не катит, т.к потоки буду заходить изменять, итог: гонка
+
