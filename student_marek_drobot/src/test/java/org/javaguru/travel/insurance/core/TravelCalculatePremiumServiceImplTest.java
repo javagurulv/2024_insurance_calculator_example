@@ -2,10 +2,11 @@ package org.javaguru.travel.insurance.core;
 
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumResponse;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TravelCalculatePremiumServiceImplTest {
 
@@ -21,7 +22,7 @@ class TravelCalculatePremiumServiceImplTest {
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
 
         // проверяем правильность заполнения
-        Assertions.assertEquals(response.getPersonFirstName(), request.getPersonFirstName());
+        assertEquals(response.getPersonFirstName(), request.getPersonFirstName());
 
     }
 
@@ -34,7 +35,7 @@ class TravelCalculatePremiumServiceImplTest {
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
 
         // проверяем правильность заполнения
-        Assertions.assertEquals(response.getPersonLastName(), request.getPersonLastName());
+        assertEquals(response.getPersonLastName(), request.getPersonLastName());
 
     }
 
@@ -47,7 +48,7 @@ class TravelCalculatePremiumServiceImplTest {
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
 
         // проверяем правильность заполнения
-        Assertions.assertEquals(response.getAgreementDateFrom(), request.getAgreementDateFrom());
+        assertEquals(response.getAgreementDateFrom(), request.getAgreementDateFrom());
     }
 
     @Test
@@ -59,7 +60,69 @@ class TravelCalculatePremiumServiceImplTest {
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
 
         // проверяем правильность заполнения
-        Assertions.assertEquals(response.getAgreementDateTo(), request.getAgreementDateTo());
+        assertEquals(response.getAgreementDateTo(), request.getAgreementDateTo());
+    }
+
+    // AI tests
+
+    @Test
+    public void TravelCalculatePremiumServiceImplAIOneTest() {
+        // Given
+        Date agreementDateFrom = new Date();
+        Date agreementDateTo = new Date(System.currentTimeMillis() + 7*24*60*60*1000); // Adding 7 days in milliseconds
+        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest("John", "Doe", agreementDateFrom, agreementDateTo);
+
+        // When
+        TravelCalculatePremiumResponse response = service.calculatePremium(request);
+
+        // Then
+        assertEquals("John", response.getPersonFirstName());
+        assertEquals("Doe", response.getPersonLastName());
+        assertEquals(agreementDateFrom, response.getAgreementDateFrom());
+        assertEquals(agreementDateTo, response.getAgreementDateTo());
+    }
+
+    @Test
+    public void TravelCalculatePremiumServiceImplAIFirstNameFieldTest() {
+        // Given
+        Date agreementDateFrom = new Date();
+        Date agreementDateTo = new Date(System.currentTimeMillis() + 7*24*60*60*1000); // Adding 7 days in milliseconds
+        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest("Jane", "Doe", agreementDateFrom, agreementDateTo);
+
+        // When
+        TravelCalculatePremiumResponse response = service.calculatePremium(request);
+
+        // Then
+        assertEquals("Jane", response.getPersonFirstName());
+    }
+
+    @Test
+    public void TravelCalculatePremiumServiceImplAILastNameFieldTest() {
+        // Given
+        Date agreementDateFrom = new Date();
+        Date agreementDateTo = new Date(System.currentTimeMillis() + 7*24*60*60*1000); // Adding 7 days in milliseconds
+        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest("John", "Smith", agreementDateFrom, agreementDateTo);
+
+        // When
+        TravelCalculatePremiumResponse response = service.calculatePremium(request);
+
+        // Then
+        assertEquals("Smith", response.getPersonLastName());
+    }
+
+    @Test
+    public void TravelCalculatePremiumServiceImplAIAgreementDatesFieldTest() {
+        // Given
+        Date agreementDateFrom = new Date();
+        Date agreementDateTo = new Date(System.currentTimeMillis() + 7*24*60*60*1000); // Adding 7 days in milliseconds
+        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest("John", "Doe", agreementDateFrom, agreementDateTo);
+
+        // When
+        TravelCalculatePremiumResponse response = service.calculatePremium(request);
+
+        // Then
+        assertEquals(agreementDateFrom, response.getAgreementDateFrom());
+        assertEquals(agreementDateTo, response.getAgreementDateTo());
     }
 
 }
