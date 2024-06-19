@@ -26,7 +26,7 @@ include 'student_nasevich_iliy'
 include 'student_roman_palugin'
 include 'student_aleksandr_masterkevich'
 include 'student_kirill_gusakov'
-include 'student_maksim_carikovich'
+include 'student_maksim_tsarykovich'
 
 
 include 'teacher:step_0'
