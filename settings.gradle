@@ -36,6 +36,7 @@ include 'student_andrey_ostapenko'
 include 'student_anatoliy_kozlov'
 include 'student_nikita_karnilchik'
 include 'student_rauf_payyzau'
+include 'student_sarvar_tohirov'
 
 
 include 'teacher:step_0'
