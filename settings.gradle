@@ -34,6 +34,7 @@ include 'student_ekaterina_konoplich'
 include 'student_pavel_shagoyko'
 include 'student_andrey_ostapenko'
 include 'student_anatoliy_kozlov'
+include 'student_nikita_karnilchik'
 
 
 include 'teacher:step_0'
