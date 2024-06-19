@@ -1,0 +1,12 @@
+Добавление нового поля в класс TravelCalculatePremiumResponse
+
+В процессе выполнения шага были изучены особенности типа данных BigInteger.
+Добавлено новое поле типа BigInteger
+
+Intellij Idea, Google.
+Изучил особенности операций типа BigInteger
+
+~20 минут
+
+Интуитивное понимание особенностей типа BigInteger
+
