@@ -28,6 +28,7 @@ include 'student_aleksandr_masterkevich'
 include 'student_kirill_gusakov'
 include 'student_maksim_tsarykovich'
 include 'student_filipp_kalinichev'
+include 'student_ivan_dauhalevich'
 
 
 include 'teacher:step_0'
