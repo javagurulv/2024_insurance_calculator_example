@@ -30,6 +30,7 @@ include 'student_maksim_tsarykovich'
 include 'student_filipp_kalinichev'
 include 'student_ivan_dauhalevich'
 include 'student_vadim_markov'
+include 'student_ekaterina_konoplich'
 
 
 include 'teacher:step_0'
