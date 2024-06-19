@@ -1,0 +1,13 @@
+**Задание**
+узнать какие действия выполняет команда build в Gradle
+TODO: опишите задание своими словами в свободной форме.
+
+команда в gradle build состоит из различных фаз:
+assemble
+build
+buildDependencies
+buildNeeded
+classes
+clean
+jar
+testClasses
