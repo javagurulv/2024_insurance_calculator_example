@@ -38,6 +38,7 @@ include 'student_nikita_karnilchik'
 include 'student_rauf_payyzau'
 include 'student_sarvar_tohirov'
 include 'student_sergey_sterlikov'
+include 'student_alex_kovalev'
 
 
 include 'teacher:step_0'
