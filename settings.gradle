@@ -32,6 +32,7 @@ include 'student_ivan_dauhalevich'
 include 'student_vadim_markov'
 include 'student_ekaterina_konoplich'
 include 'student_pavel_shagoyko'
+include 'student_andrey_ostapenko'
 
 
 include 'teacher:step_0'
