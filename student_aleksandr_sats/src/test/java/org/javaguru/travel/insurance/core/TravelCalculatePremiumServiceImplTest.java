@@ -2,24 +2,46 @@ package org.javaguru.travel.insurance.core;
 
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumRequest;
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumResponse;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
 import java.util.Date;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class TravelCalculatePremiumServiceImplTest {
 
-    @Test
-    public void calculatePremiumFillingTest() {
+    private TravelCalculatePremiumServiceImpl service = new TravelCalculatePremiumServiceImpl();
+    private TravelCalculatePremiumRequest request;
+    private TravelCalculatePremiumResponse response;
+
+    @BeforeAll
+    public void initRequest() {
         Date agreementDateFrom = new Date(System.currentTimeMillis());
         Date agreementDateTo = new Date((long) (System.currentTimeMillis() * 1.2));
-        TravelCalculatePremiumRequest request =
-                new TravelCalculatePremiumRequest("FirstName", "LastName", agreementDateFrom, agreementDateTo);
+        request = new TravelCalculatePremiumRequest("FirstName", "LastName", agreementDateFrom, agreementDateTo);
 
-        TravelCalculatePremiumServiceImpl service = new TravelCalculatePremiumServiceImpl();
-        TravelCalculatePremiumResponse response = service.calculatePremium(request);
+        response = service.calculatePremium(request);
+    }
 
-        assertThat(response).usingRecursiveComparison().isEqualTo(response);
+    @Test
+    public void personFirstNameFillingTest() {
+        Assertions.assertEquals(response.getPersonFirstName(), request.getPersonFirstName());
+    }
+
+    @Test
+    public void personLastNameFillingTest() {
+        Assertions.assertEquals(response.getPersonLastName(), request.getPersonLastName());
+    }
+
+    @Test
+    public void agreementDateFromFillingTest() {
+        Assertions.assertEquals(response.getAgreementDateFrom(), request.getAgreementDateFrom());
+    }
+
+    @Test
+    public void agreementDateToTest() {
+        Assertions.assertEquals(response.getAgreementDateTo(), request.getAgreementDateTo());
     }
 }
