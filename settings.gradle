@@ -39,6 +39,7 @@ include 'student_rauf_payyzau'
 include 'student_sarvar_tohirov'
 include 'student_sergey_sterlikov'
 include 'student_alex_kovalev'
+include 'student_konstantin_pingol'
 
 
 include 'teacher:step_0'
