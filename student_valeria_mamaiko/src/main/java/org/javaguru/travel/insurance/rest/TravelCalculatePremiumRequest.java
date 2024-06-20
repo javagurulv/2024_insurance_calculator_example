@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Setter
@@ -14,7 +15,7 @@ import java.util.Date;
 public class TravelCalculatePremiumRequest {
     private String personFirstName;
     private String personLastName;
-    private Date agreementDateFrom;
-    private Date agreementDateTo;
+    private LocalDate agreementDateFrom;
+    private LocalDate agreementDateTo;
 
 }
