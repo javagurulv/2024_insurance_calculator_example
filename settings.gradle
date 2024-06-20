@@ -41,6 +41,7 @@ include 'student_sergey_sterlikov'
 include 'student_alex_kovalev'
 include 'student_konstantin_pingol'
 include 'student_stanislav_lobanov'
+include 'student_dima_kozhanovsky'
 
 
 include 'teacher:step_0'
