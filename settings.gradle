@@ -45,6 +45,7 @@ include 'student_dima_kozhanovsky'
 include 'student_verаnika_vishviankova'
 include 'student_ruslan_novikov'
 include 'student_alexandr_klimuk'
+include 'student_sergey_ivanenko'
 
 
 include 'teacher:step_0'
