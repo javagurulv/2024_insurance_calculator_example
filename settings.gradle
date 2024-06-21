@@ -48,6 +48,7 @@ include 'student_alexandr_klimuk'
 include 'student_sergey_ivanenko'
 include 'student_andrey_poliakov'
 include 'student_danila_eremenko'
+include 'student_anton_pikulik'
 
 
 include 'teacher:step_0'
