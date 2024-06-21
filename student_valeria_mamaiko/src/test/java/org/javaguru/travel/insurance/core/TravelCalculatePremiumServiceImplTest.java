@@ -5,9 +5,8 @@ import org.javaguru.travel.insurance.rest.TravelCalculatePremiumResponse;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-
-
 import java.util.Date;
+
 
 class TravelCalculatePremiumServiceImplTest {
     private final TravelCalculatePremiumServiceImpl calculatePremiumService;
@@ -50,14 +49,6 @@ class TravelCalculatePremiumServiceImplTest {
         request.setAgreementDateTo(agreementDateTo);
         TravelCalculatePremiumResponse response = calculatePremiumService.calculatePremium(request);
         Assertions.assertEquals(response.getAgreementDateTo(), request.getAgreementDateTo());
-    }
-
-    @Test
-    public void dateQuestionTest() throws InterruptedException {
-        Date agreementDateFrom = new Date();
-        /*Thread.sleep(2000);*/
-        Date agreementDateTo = new Date();
-        Assertions.assertEquals(agreementDateFrom.getTime(), agreementDateTo.getTime());
     }
 
 }
