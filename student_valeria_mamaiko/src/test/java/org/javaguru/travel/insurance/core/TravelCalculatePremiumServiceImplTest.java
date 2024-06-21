@@ -52,20 +52,6 @@ class TravelCalculatePremiumServiceImplTest {
         Assertions.assertEquals(response.getAgreementDateTo(), request.getAgreementDateTo());
     }
 
-    /*@Test
-    public void calculatePremiumTest() {
-        String lastName = "mamaiko";
-        String firstName = "valeria";
-        Date agreementDateFrom = new Date(124, 5, 1);
-        Date agreementDateTo = new Date(124, 5, 20);
-        TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest(
-                firstName, lastName, agreementDateFrom, agreementDateTo);
-        TravelCalculatePremiumResponse response = new TravelCalculatePremiumResponse(
-                firstName, lastName, agreementDateFrom, agreementDateTo);
-        TravelCalculatePremiumResponse funcResponse = calculatePremiumService.calculatePremium(request);
-        Assertions.assertEquals(response, funcResponse);
-    }*/
-
     @Test
     public void dateQuestionTest() throws InterruptedException {
         Date agreementDateFrom = new Date();
