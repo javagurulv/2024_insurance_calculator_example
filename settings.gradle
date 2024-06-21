@@ -52,6 +52,7 @@ include 'student_anton_pikulik'
 include 'student_shykunou_uladzislau'
 include 'student_stepan_karapetyan'
 include 'student_aliaksei_kryvetski'
+include 'student_artyom_letko'
 
 
 include 'teacher:step_0'
