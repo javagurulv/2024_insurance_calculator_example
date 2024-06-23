@@ -7,13 +7,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 class TravelCalculatePremiumServiceImplTest {
 
     private final TravelCalculatePremiumServiceImpl service = new TravelCalculatePremiumServiceImpl();
     private TravelCalculatePremiumRequest request;
     private TravelCalculatePremiumResponse response;
+    private BigDecimal expectedAgreementPrice;
 
     @BeforeEach
     public void setup() {
@@ -22,6 +25,9 @@ class TravelCalculatePremiumServiceImplTest {
         request.setPersonLastName("Ivanov");
         request.setAgreementDateFrom(new Date(1719219600000L));
         request.setAgreementDateTo(new Date(1719306000000L));
+        long timeInMillis = request.getAgreementDateFrom().getTime() - request.getAgreementDateTo().getTime();
+        long days = TimeUnit.DAYS.convert(timeInMillis, TimeUnit.MILLISECONDS);
+        expectedAgreementPrice = new BigDecimal(days);
         response = service.calculatePremium(request);
     }
 
@@ -46,11 +52,18 @@ class TravelCalculatePremiumServiceImplTest {
     }
 
     @Test
+    public void testAgreementPrice() {
+        assertThat(response.getAgreementPrice()).isEqualTo(expectedAgreementPrice);
+    }
+
+    @Test
     public void testCalculatePremium() {
         assertThat(response.getPersonFirstName()).isEqualTo("John");
         assertThat(response.getPersonLastName()).isEqualTo("Ivanov");
         assertThat(response.getAgreementDateFrom()).isEqualTo("2024-06-24T12:00:00.000");
         assertThat(response.getAgreementDateTo()).isEqualTo("2024-06-25T12:00:00.000");
+        assertThat(response.getAgreementPrice()).isEqualTo(new BigDecimal(TimeUnit.DAYS.convert(-86400000L,
+                TimeUnit.MILLISECONDS)));
     }
 
     @Test
@@ -117,5 +130,6 @@ class TravelCalculatePremiumServiceImplTest {
         // Assert the expected agreement dates
         assertEquals(fromDate, result.getAgreementDateFrom());
         assertEquals(toDate, result.getAgreementDateTo());
+
     }
 }
