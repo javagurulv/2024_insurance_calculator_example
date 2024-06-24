@@ -30,5 +30,4 @@ class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService
         }
         else return null;
     }
-
 }
