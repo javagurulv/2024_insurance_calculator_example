@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
@@ -16,8 +17,8 @@ import java.util.Objects;
 public class TravelCalculatePremiumResponse {
     private String personFirstName;
     private String personLastName;
-    private Date agreementDateFrom;
-    private Date agreementDateTo;
+    private LocalDate agreementDateFrom;
+    private LocalDate agreementDateTo;
     private BigDecimal agreementPrice;
 
     @Override
@@ -28,11 +29,12 @@ public class TravelCalculatePremiumResponse {
         return Objects.equals(personFirstName, response.personFirstName)
                 && Objects.equals(personLastName, response.personLastName)
                 && Objects.equals(agreementDateFrom, response.agreementDateFrom)
-                && Objects.equals(agreementDateTo, response.agreementDateTo);
+                && Objects.equals(agreementDateTo, response.agreementDateTo)
+                && Objects.equals(agreementPrice, response.agreementPrice);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(personFirstName, personLastName, agreementDateFrom, agreementDateTo);
+        return Objects.hash(personFirstName, personLastName, agreementDateFrom, agreementDateTo, agreementPrice);
     }
 }

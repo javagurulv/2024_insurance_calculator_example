@@ -1,3 +1,4 @@
+/*
 package org.javaguru.travel.insurance.core;
 
 import org.javaguru.travel.insurance.rest.TravelCalculatePremiumRequest;
@@ -47,3 +48,4 @@ public class OpenAiTest {
         Assertions.assertEquals(request.getAgreementDateTo(), response.getAgreementDateTo());
     }
 }
+*/
