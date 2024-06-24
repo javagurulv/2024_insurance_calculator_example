@@ -25,7 +25,7 @@ class TravelCalculatePremiumServiceImplTest {
         request.setPersonLastName("Ivanov");
         request.setAgreementDateFrom(new Date(1719219600000L));
         request.setAgreementDateTo(new Date(1719306000000L));
-        long timeInMillis = request.getAgreementDateFrom().getTime() - request.getAgreementDateTo().getTime();
+        long timeInMillis = request.getAgreementDateTo().getTime() - request.getAgreementDateFrom().getTime();
         long days = TimeUnit.DAYS.convert(timeInMillis, TimeUnit.MILLISECONDS);
         expectedAgreementPrice = new BigDecimal(days);
         response = service.calculatePremium(request);
@@ -62,7 +62,7 @@ class TravelCalculatePremiumServiceImplTest {
         assertThat(response.getPersonLastName()).isEqualTo("Ivanov");
         assertThat(response.getAgreementDateFrom()).isEqualTo("2024-06-24T12:00:00.000");
         assertThat(response.getAgreementDateTo()).isEqualTo("2024-06-25T12:00:00.000");
-        assertThat(response.getAgreementPrice()).isEqualTo(new BigDecimal(TimeUnit.DAYS.convert(-86400000L,
+        assertThat(response.getAgreementPrice()).isEqualTo(new BigDecimal(TimeUnit.DAYS.convert(86400000L,
                 TimeUnit.MILLISECONDS)));
     }
 

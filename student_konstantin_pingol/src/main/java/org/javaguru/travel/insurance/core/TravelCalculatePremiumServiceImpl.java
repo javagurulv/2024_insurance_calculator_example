@@ -22,7 +22,7 @@ class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService
     }
 
     private long calculateTimeInMillisBetweenAgreementDays(TravelCalculatePremiumRequest request) {
-        return request.getAgreementDateFrom().getTime() - request.getAgreementDateTo().getTime();
+        return request.getAgreementDateTo().getTime() - request.getAgreementDateFrom().getTime();
     }
 
     private long convertTimeInMillisToDays(Long timeInMillis) {
