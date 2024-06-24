@@ -54,13 +54,6 @@ class TravelCalculatePremiumServiceImplTest {
         Assertions.assertEquals(response.getAgreementDateTo(), request.getAgreementDateTo());
     }
 
-    public static void assertEquals(BigDecimal expected, BigDecimal actual, boolean precisionMatters) {
-        if (precisionMatters) {
-            Assertions.assertEquals(expected, actual);
-        } else {
-            Assertions.assertEquals(0, expected.compareTo(actual));
-        }
-    }
     @Test
     public void calculateAgreementPriceTest(){
         TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
@@ -70,8 +63,7 @@ class TravelCalculatePremiumServiceImplTest {
         request.setAgreementDateTo(agreementDateTo);
         TravelCalculatePremiumResponse response = calculatePremiumService.calculatePremium(request);
         BigDecimal agreementPrice = new BigDecimal(ChronoUnit.DAYS.between(agreementDateFrom, agreementDateTo));
-        System.out.println(response.getAgreementPrice());
-        assertEquals(response.getAgreementPrice(), agreementPrice, true);
+        AdditionalTools.assertEquals(response.getAgreementPrice(), agreementPrice, true);
     }
 
 }
