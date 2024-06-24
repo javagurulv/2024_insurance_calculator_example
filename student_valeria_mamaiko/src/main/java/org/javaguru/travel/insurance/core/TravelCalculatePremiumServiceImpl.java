@@ -24,8 +24,11 @@ class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService
     }
 
     public static BigDecimal countAgreementPrice(LocalDate agreementDateFrom, LocalDate agreementDateTo){
-        long fakeAgreementPrice = ChronoUnit.DAYS.between(agreementDateFrom, agreementDateTo);
-        return new BigDecimal(fakeAgreementPrice);
+        if((agreementDateFrom != null) && (agreementDateTo != null)){
+            long fakeAgreementPrice = ChronoUnit.DAYS.between(agreementDateFrom, agreementDateTo);
+            return new BigDecimal(fakeAgreementPrice);
+        }
+        else return null;
     }
 
 }
