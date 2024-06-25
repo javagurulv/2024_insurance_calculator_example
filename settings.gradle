@@ -55,6 +55,7 @@ include 'student_aliaksei_kryvetski'
 include 'student_artyom_letko'
 include 'student_siroj_ilkhomov'
 include 'student_egor_korneev'
+include 'student_stanislav_kozhitsev'
 
 
 include 'teacher:step_0'
