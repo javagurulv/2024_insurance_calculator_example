@@ -9,3 +9,7 @@ dependencies {
 	}
 
 }
+
+task printing {
+	println("tg, inst: @faradenzik")
+}
