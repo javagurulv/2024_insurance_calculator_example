@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/2024_insurance_calculator_example-main" />
+        <option name="gradleJvm" value="21" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_aleksandr_masterkevich" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_aleksandr_sats" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_aleksey_kuncevich" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_alex_kovalev" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_alexander_korhov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_anatoliy_kozlov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_andrey_ostapenko" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_anna_zhernoclyova" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_dima_kozhanovsky" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_ekaterina_konoplich" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_filipp_kalinichev" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_helenko_daniil" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_ilya_zhuk" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_ivan_dauhalevich" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_kirill_gusakov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_konstantin_pingol" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_lastname_firstname" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_maksim_tsarykovich" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_marat_petrovsky" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_marek_drobot" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_nasevich_iliy" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_nikita_karnilchik" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_nikita_kogtev" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_nikita_ryabchikov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_pavel_shagoyko" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_pisarchik_elizaveta" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_polina_hval" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_radkevich_vladislav" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_rauf_payyzau" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_rifat_suleymanov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_roman_kuznetsov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_roman_palugin" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_ruslan_novikov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_sapar_kutbidinov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_sarvar_tohirov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_sergey_sterlikov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_stanislav_lobanov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_stepan_gerasimovich" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_stepan_karapetyan" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_stepan_kardash" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_vadim_markov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_vadzim_shylko" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_valeria_mamaiko" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_valeryia_dzianisava" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_verаnika_vishviankova" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_vladislav_kuzir" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/student_vladislav_volkov" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_0" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_1" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_10" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_11" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_12" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_13" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_14" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_15" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_16" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_17" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_18" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_19" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_2" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_20" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_3" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_4" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_5" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_6" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_7" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_8" />
+            <option value="$PROJECT_DIR$/2024_insurance_calculator_example-main/teacher/step_9" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
