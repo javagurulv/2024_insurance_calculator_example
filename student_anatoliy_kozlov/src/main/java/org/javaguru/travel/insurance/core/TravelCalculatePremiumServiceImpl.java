@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 class TravelCalculatePremiumServiceImpl implements TravelCalculatePremiumService {
 
+    TravelCalculatePremiumServiceImpl() {}
+
     @Override
     public TravelCalculatePremiumResponse calculatePremium(TravelCalculatePremiumRequest request) {
         return new TravelCalculatePremiumResponse(
