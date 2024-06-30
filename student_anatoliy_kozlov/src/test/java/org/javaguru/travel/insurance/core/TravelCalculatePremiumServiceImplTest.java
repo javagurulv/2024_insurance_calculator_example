@@ -17,6 +17,8 @@ class TravelCalculatePremiumServiceImplTest {
     public void CorrectFirstName() {
         TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
         request.SetFirstName("John");
+        request.SetAgreementDateFrom(new Date());
+        request.SetAgreementDateTo(new Date());
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
         assertEquals(response.GetFirstName(), request.GetFirstName());
     }
@@ -25,6 +27,8 @@ class TravelCalculatePremiumServiceImplTest {
     public void CorrectLastName() {
         TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
         request.SetLastName("Tolkien");
+        request.SetAgreementDateFrom(new Date());
+        request.SetAgreementDateTo(new Date());
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
         assertEquals(response.GetLastName(), request.GetLastName());
     }
@@ -34,6 +38,7 @@ class TravelCalculatePremiumServiceImplTest {
     {
         TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
         request.SetAgreementDateFrom(new Date());
+        request.SetAgreementDateTo(new Date());
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
         assertEquals(response.GetAgreementDateFrom(), request.GetAgreementDateFrom());
     }
@@ -42,10 +47,12 @@ class TravelCalculatePremiumServiceImplTest {
     public void CorrectAgreementDateTo()
     {
         TravelCalculatePremiumRequest request = new TravelCalculatePremiumRequest();
+        request.SetAgreementDateFrom(new Date());
         request.SetAgreementDateTo(new Date());
         TravelCalculatePremiumResponse response = service.calculatePremium(request);
         assertEquals(response.GetAgreementDateTo(), request.GetAgreementDateTo());
     }
+
 
 
 }
